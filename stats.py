@@ -9,3 +9,14 @@ def symbol_count(book_text):
         else:
             stats[symbol] = 1
     return stats
+
+def sort_on(symbols):
+    return symbols["num"]
+
+def symbol_sorted_list(symbols):
+    sorted_list = []
+    for symbol in symbols:
+        sorted_list.append({"char": symbol, "num": symbols[symbol]})
+    sorted_list.sort(reverse=True, key=sort_on)
+    return sorted_list 
+
